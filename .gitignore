@@ -1,0 +1,7 @@
+.vscode/*
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
+
+# Cmake stuff
+**/build/*
