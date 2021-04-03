@@ -176,16 +176,18 @@ static void ad9833_set_mode(struct fhdm_ad9833 *ad9833, enum fhdm_ad9833_mode mo
 
         if (mode == FHDM_AD9833_MODE_SINE) {
             ad9833_clear_bit(&ad9833->control_register_value, AD9833_CTRL_REG_OPB);
-            ad9833_clear_bit(&ad9833->control_register_value, AD9833_CTRL_REG_MOD);            
+            ad9833_clear_bit(&ad9833->control_register_value, AD9833_CTRL_REG_MOD);
         } else if (mode == FHDM_AD9833_MODE_TRIANGLE) {
             ad9833_clear_bit(&ad9833->control_register_value, AD9833_CTRL_REG_OPB);
             ad9833_set_bit(&ad9833->control_register_value, AD9833_CTRL_REG_MOD);
         } else if (mode == FHDM_AD9833_MODE_SQUARE) {
             ad9833_set_bit(&ad9833->control_register_value, AD9833_CTRL_REG_OPB);
             ad9833_clear_bit(&ad9833->control_register_value, AD9833_CTRL_REG_DV2);
+            ad9833_clear_bit(&ad9833->control_register_value, AD9833_CTRL_REG_MOD);
         } else if (mode == FHDM_AD9833_MODE_SQUARE_DIV2) {
             ad9833_set_bit(&ad9833->control_register_value, AD9833_CTRL_REG_OPB);
             ad9833_set_bit(&ad9833->control_register_value, AD9833_CTRL_REG_DV2);
+            ad9833_clear_bit(&ad9833->control_register_value, AD9833_CTRL_REG_MOD);
         }
     }
 

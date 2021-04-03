@@ -20,10 +20,13 @@ int main() {
     gpio_put(LED_PIN, 1);
 
     stdio_init_all();
-    printf("example-defaults\n");
+    printf("example-simple\n");
 
     struct fhdm_ad9833 ad9833;
     fhdm_ad9833_pico_new(&ad9833);
+
+    // Use GPIO 13, 14 and 15 instead of the defaults.
+    //ad9833.set_pins(&ad9833, 13, 14, 15);
 
     ad9833.start(&ad9833);
 
