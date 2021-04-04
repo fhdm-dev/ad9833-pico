@@ -37,7 +37,7 @@ target_link_libraries(mytarget
 ```
 int main() {
 
-    //  Declare a variable of type 'struct fhdm_ad9833_pico' and initialise it:
+    //  Declare a variable of type 'struct fhdm_ad9833' and initialise it:
     struct fhdm_ad9833 ad9833;
     fhdm_ad9833_pico_new(&ad9833);
 
@@ -70,7 +70,7 @@ int main() {
 
 ## API Usage
 
-You first need to declare a variable of type 'struct fhdm_ad9833_pico' and initialise it:
+You first need to declare a variable of type 'struct fhdm_ad9833' and initialise it:
 
     struct fhdm_ad9833 ad9833;
     fhdm_ad9833_pico_new(&ad9833)
